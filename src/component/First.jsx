@@ -7,7 +7,7 @@ import Feature from "./Feature";
 const First = () => {
   const data = useLoaderData();
  
-console.log(data[1])
+
   
   
   return (

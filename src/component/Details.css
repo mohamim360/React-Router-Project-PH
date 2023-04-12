@@ -1,0 +1,7 @@
+.detail{
+  display: flex;
+}
+.det-box{
+  border: 1px solid lightskyblue;
+  background-color: lightslategray;
+}

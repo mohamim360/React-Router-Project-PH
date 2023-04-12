@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./component/Home";
 import Statistics from "./component/Statistics";
-
+import Details from "./component/Details";
 import Blog from "./component/Blog"
 import First from "./component/First";
 
@@ -31,6 +31,11 @@ const router = createBrowserRouter([
         path: "/Blog",
         element: <Blog></Blog>,
       },
+      {
+        path: "/Details",
+        element: <Details></Details>,
+        loader: () => fetch('public/Category.json')
+      }
     ],
   },
 ]);

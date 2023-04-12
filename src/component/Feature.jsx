@@ -1,5 +1,6 @@
 import React from 'react';
 import './Feature.css'
+import { Link } from 'react-router-dom';
 const Feature = ({info}) => {
 
   const {logo, job,company,location,salary,opt1,opt2} = info;
@@ -16,7 +17,7 @@ const Feature = ({info}) => {
         <p>{location}</p>
         <p>{salary}</p>
       </div>
-      <button>View Details</button>
+      <button><Link to="/Details">View Details</Link></button>
     </div>
   );
 };
