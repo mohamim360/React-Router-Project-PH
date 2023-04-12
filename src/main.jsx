@@ -5,6 +5,7 @@ import Statistics from "./component/Statistics";
 
 import Blog from "./component/Blog"
 import First from "./component/First";
+
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -17,8 +18,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <First></First>,
-        loader: () => fetch('public/Category.json')
+        loader: () => fetch('public/Category.json'),
+        
+        
       },
+     
       {
         path: "/Statistics",
         element: <Statistics></Statistics>,
