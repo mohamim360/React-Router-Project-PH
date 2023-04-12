@@ -1,6 +1,10 @@
 import React from 'react';
 import './First.css'
+import Category from './Category';
+import { useLoaderData } from 'react-router-dom';
 const First = () => {
+  const data = useLoaderData();
+  console.log(data)
   return (
     <div>
     <banner>
@@ -14,7 +18,21 @@ const First = () => {
        
         <img src="src/assets/All Images/P3OLGJ1 copy 1.png" alt="" />
       </banner>
-
+    
+    <div className='category'>
+    <h2>Job Category List</h2>
+      <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+      <div className='boxes'>
+      {
+          data.map(info => <Category
+          key = {info.id}
+          info = {info}
+            ></Category>
+          )
+      }
+      </div>
+      
+    </div>
       
     </div>
   );

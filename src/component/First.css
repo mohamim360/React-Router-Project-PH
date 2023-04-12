@@ -7,6 +7,13 @@ banner{
 banner img{
   height: 500px;
 }
+.category{
+  text-align: center;
+}
 .ban{
   margin: 0 100px;
+}
+.boxes{
+  display: flex;
+  justify-content: space-around;
 }
