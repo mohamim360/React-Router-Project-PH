@@ -1,0 +1,12 @@
+banner{
+  
+  display:flex ;
+  align-items: center;
+  background-color: lightskyblue; 
+}
+banner img{
+  height: 500px;
+}
+.ban{
+  margin: 0 100px;
+}

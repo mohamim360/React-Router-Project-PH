@@ -1,0 +1,15 @@
+.header{
+ background-color: lightskyblue; 
+ 
+}
+.navber{
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+
+ margin: 0 100px;
+}
+
+nav a{
+  margin-right: 60px;
+}
