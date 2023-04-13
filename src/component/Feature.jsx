@@ -3,7 +3,7 @@ import './Feature.css'
 import { Link } from 'react-router-dom';
 const Feature = ({info}) => {
 
-  const {logo, job,company,location,salary,opt1,opt2} = info;
+  const {id,logo, job,company,location,salary,opt1,opt2} = info;
   return (
     <div className='box'>
       <img src={logo} alt="" />
@@ -17,7 +17,7 @@ const Feature = ({info}) => {
         <p>{location}</p>
         <p>{salary}</p>
       </div>
-      <button><Link to="/Details">View Details</Link></button>
+      <button><Link  to="/Details">View Details</Link></button>
     </div>
   );
 };

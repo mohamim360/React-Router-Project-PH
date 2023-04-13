@@ -5,6 +5,7 @@ import Statistics from "./component/Statistics";
 import Details from "./component/Details";
 import Blog from "./component/Blog"
 import First from "./component/First";
+import Job from "./component/Job";
 
 import "./index.css";
 
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <First></First>,
-        loader: () => fetch('public/Category.json'),
+        loader: () => fetch('Category.json'),
         
         
       },
@@ -32,9 +33,14 @@ const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
+        path: "/Job",
+        element: <Job></Job>,
+      },
+     
+      {
         path: "/Details",
         element: <Details></Details>,
-        loader: () => fetch('public/Category.json')
+        
       }
     ],
   },

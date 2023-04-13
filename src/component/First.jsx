@@ -3,12 +3,38 @@ import "./First.css";
 import Category from "./Category";
 import { useLoaderData } from "react-router-dom";
 import Feature from "./Feature";
-
+const arr = [
+  {
+    "id": 1,
+    "icon":"src/assets/Icons/accounts 1.png" ,
+    "title":"Account & Finance",
+    "jobs":"300 Jobs Available"
+    
+  },
+  {
+    "id": 2,
+    "icon":"src/assets/Icons/business 1.png" ,
+    "title":"Creative Design",
+    "jobs":"100+ Jobs Available"
+  },
+  {
+    "id": 3,
+    "icon":"src/assets/Icons/social-media 1.png" ,
+    "title":"Marketing & Sales",
+    "jobs":"150 Jobs Available"
+  },
+  {
+    "id": 4,
+    "icon":"src/assets/Icons/chip 1.png" ,
+    "title":"Engineering Job",
+    "jobs":"300 Jobs Available"
+  }
+]
 const First = () => {
   const data = useLoaderData();
  
 
-  
+  console.log(data[0])
   
   return (
     <div>
@@ -33,7 +59,7 @@ const First = () => {
           need. Its your future
         </p>
         <div className="boxes">
-          {data[0].map((info) => (
+          {arr.map((info) => (
             <Category key={info.id} info={info}></Category>
           ))}
         </div>
@@ -48,7 +74,7 @@ const First = () => {
       <div>
         
        {
-        data[1].map((info) => (
+        data.map((info) => (
           <Feature key={info.id} info={info}></Feature>
         ))
        }

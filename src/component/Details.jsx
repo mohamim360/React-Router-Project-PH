@@ -2,26 +2,31 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import './Details.css'
 const Details = () => {
-  const data = useLoaderData();
-  console.log(data[1][0]);
+ 
+
+  const handleApplyNow = () => {
+    localStorage.setItem("jobData", JSON.stringify(data));
+    
+  };
+
   return (
     <div className="detail">
       <div>
-        <p>{data[1][0].Des}</p>
-        <p>{data[1][0].res}</p>
-        <p>{data[1][0].req}</p>
-        <p>{data[1][0].exp}</p>
+        <p>{data.Des}</p>
+        <p>{data.res}</p>
+        <p>{data.req}</p>
+        <p>{data.exp}</p>
       </div>
 
       <div className="det-box">
         <h5>Job Details</h5>
-        <p>Salary : {data[1][0].salary}</p>
-        <p>job Title : {data[1][0].job}</p>
+        <p>Salary : {data.salary}</p>
+        <p>job Title : {data.job}</p>
         <h5>Contact Information</h5>
-        <p>Phone : 01750-00 00 00</p>
-        <p>Email : info@gmail.com</p>
+        <p></p>
+        <p></p>
 
-        <button>Apply Now</button>
+        <button onClick={handleApplyNow}>Apply Now</button>
       </div>
     </div>
   );
