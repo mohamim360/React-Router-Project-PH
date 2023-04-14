@@ -6,7 +6,7 @@ import Details from "./component/Details";
 import Blog from "./component/Blog"
 import First from "./component/First";
 import Job from "./component/Job";
-
+import Error from "./component/Error";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -15,6 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
