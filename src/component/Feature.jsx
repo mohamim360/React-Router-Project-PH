@@ -17,7 +17,7 @@ const Feature = ({info}) => {
         <p>{location}</p>
         <p>{salary}</p>
       </div>
-      <button><Link  to="/Details">View Details</Link></button>
+      <button><Link to={`/Details/${id}`}>View Details</Link></button>
     </div>
   );
 };
