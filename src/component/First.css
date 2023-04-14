@@ -1,10 +1,10 @@
-banner{
+.banner{
   
   display:flex ;
   align-items: center;
   background-color: lightskyblue; 
 }
-banner img{
+.banner img{
   height: 500px;
 }
 .category{
@@ -26,4 +26,25 @@ banner img{
 }
 .fea{
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .ban {
+    margin: 0 20px;
+  }
+  .banner img {
+    height: 220px;
+  }
+  .boxes {
+    flex-wrap: wrap;
+  }
+  .category {
+    margin-bottom: 40px;
+  }
+  .fea {
+    margin: 20px;
+  }
+  .feature {
+    grid-template-columns: 1fr;
+  }
 }

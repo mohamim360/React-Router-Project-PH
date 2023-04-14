@@ -38,7 +38,7 @@ const First = () => {
   
   return (
     <div>
-      <banner>
+      <div className="banner">
         <div className="ban">
           <h2>One Step Closer To Your Dream Job</h2>
           <p>
@@ -50,7 +50,7 @@ const First = () => {
         </div>
 
         <img src="src/assets/All Images/P3OLGJ1 copy 1.png" alt="" />
-      </banner>
+      </div>
 
       <div className="category">
         <h2>Job Category List</h2>
