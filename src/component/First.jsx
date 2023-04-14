@@ -64,14 +64,14 @@ const First = () => {
           ))}
         </div>
       </div>
-      <div>
+      <div className="fea">
       <h3>Featured Jobs</h3>
       <p>
         Explore thousands of job opportunities with all the information you
         need. Its your future
       </p>
 
-      <div>
+      <div className="feature">
         
        {
         data.map((info) => (
@@ -80,6 +80,7 @@ const First = () => {
        }
         
       </div>
+      <button>See All Jobs</button>
       </div>
       
     </div>

@@ -17,3 +17,13 @@ banner img{
   display: flex;
   justify-content: space-around;
 }
+.feature{
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 20px;
+  margin: 20px;
+  
+}
+.fea{
+  text-align: center;
+}
