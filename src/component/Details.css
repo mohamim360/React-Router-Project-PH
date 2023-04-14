@@ -1,7 +1,12 @@
 .detail{
   display: flex;
+  margin: 50px;
 }
 .det-box{
   border: 1px solid lightskyblue;
   background-color: lightslategray;
+  padding: 50px;
+}
+.job{
+  text-align: center;
 }

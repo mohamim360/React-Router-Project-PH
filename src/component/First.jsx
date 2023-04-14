@@ -3,6 +3,8 @@ import "./First.css";
 import Category from "./Category";
 import { useLoaderData } from "react-router-dom";
 import Feature from "./Feature";
+import { useState } from "react";
+useState
 const arr = [
   {
     "id": 1,
@@ -33,8 +35,12 @@ const arr = [
 const First = () => {
   const data = useLoaderData();
  
+  const [numJobs, setJobs] = useState(4);
 
-  console.log(data[0])
+  const handleClick = () => {
+    setJobs(data.length);
+  };
+  
   
   return (
     <div>
@@ -72,15 +78,16 @@ const First = () => {
       </p>
 
       <div className="feature">
-        
-       {
-        data.map((info) => (
+        {data.slice(0, numJobs).map((info) => (
           <Feature key={info.id} info={info}></Feature>
-        ))
-       }
-        
+        ))}
       </div>
-      <button>See All Jobs</button>
+      <div>
+      {numJobs < data.length && (
+        <button onClick={handleClick}>See All Jobs</button>
+      )}
+      </div>
+      
       </div>
       
     </div>

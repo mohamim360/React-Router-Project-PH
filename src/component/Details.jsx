@@ -87,16 +87,19 @@ const handleClick = () => {
   const existingData = JSON.parse(localStorage.getItem('jobApplications')) || [];
   const jobExists = existingData.find(existingJob => existingJob.id === job.id);
   if (jobExists) {
-    alert(' job  already been added!');
+   
   } else {
     const newData = [...existingData, job];
     localStorage.setItem('jobApplications', JSON.stringify(newData));
-    alert('Job  added successfully!');
+    
   }
 }
 
  return (
-   <div className="detail">
+  <div className="job">
+    <h2>Job Details</h2>
+    <div className="detail">
+    
      <div>
        <p>{job.Des}</p>
        <p>{job.res}</p>
@@ -118,6 +121,8 @@ const handleClick = () => {
         <button onClick={handleClick}>Apply Now</button>
       </div>
     </div>
+  </div>
+   
   );
 };
 
